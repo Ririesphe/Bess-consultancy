@@ -26,6 +26,12 @@ body{
     color:#0B1F3A;
 }
 
+.section-subtitle{
+    font-size:18px;
+    color:#666;
+    margin-top:10px;
+}
+
 /* NAVBAR */
 
 .navbar{
@@ -184,6 +190,15 @@ body{
     margin-bottom:30px;
 }
 
+.about-list{
+    margin:20px 0 30px 30px;
+    line-height:2;
+}
+
+.about-list li{
+    margin-bottom:15px;
+}
+
 .stats{
     display:flex;
     gap:20px;
@@ -206,30 +221,93 @@ body{
 .services-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    gap:20px;
 }
 
 .service-card{
     background:white;
-    padding:40px;
+    padding:25px;
     border-radius:20px;
     text-align:center;
-    transition:0.3s;
+    transition:all 0.3s ease;
     box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    border-top:4px solid #6C63FF;
+    position:relative;
 }
 
 .service-card:hover{
     transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-.service-card i{
-    font-size:50px;
-    color:#6C63FF;
-    margin-bottom:20px;
+.service-badge{
+    display:inline-block;
+    background:linear-gradient(135deg, #6C63FF, #5753d4);
+    color:white;
+    font-size:11px;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.service-icon{
+    width:50px;
+    height:50px;
+    background:#6C63FF;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin:0 auto 12px;
+    transition:all 0.3s ease;
+}
+
+.service-card:hover .service-icon{
+    transform:scale(1.1) rotate(5deg);
+    background:linear-gradient(135deg, #6C63FF, #5753d4);
 }
 
 .service-card h3{
-    margin-bottom:15px;
+    margin-bottom:10px;
+    color:#0B1F3A;
+    font-size:18px;
+}
+
+.service-card p{
+    display:none;
+}
+
+.learn-more{
+    display:none;
+}
+
+.service-features{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.service-features li{
+    padding:5px 0;
+    color:#666;
+    font-size:12px;
+    border-top:1px solid #f0f0f0;
+}
+
+.service-features li:first-child{
+    border-top:none;
+}
+
+.service-features li:before{
+    content:"✓ ";
+    color:#6C63FF;
+    font-weight:bold;
+    margin-right:6px;
 }
 
 /* WHY US */
