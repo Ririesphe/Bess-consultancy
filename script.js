@@ -3,10 +3,11 @@
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
+if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
 
 // SMOOTH SCROLL
 
@@ -24,7 +25,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 });
-
 
 // TESTIMONIALS CAROUSEL
 
@@ -51,12 +51,18 @@ function prevTestimonial() {
     showTestimonial(currentTestimonial);
 }
 
-prevBtn.addEventListener('click', prevTestimonial);
-nextBtn.addEventListener('click', nextTestimonial);
+if (prevBtn) {
+    prevBtn.addEventListener('click', prevTestimonial);
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', nextTestimonial);
+}
 
 // Initialize with first testimonial active
-showTestimonial(0);
-
+if (testimonialCards.length > 0) {
+    showTestimonial(0);
+}
 
 // BACK TO TOP BUTTON
 
